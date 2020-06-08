@@ -2,7 +2,6 @@ import io
 import os
 import re
 import sys
-import tempfile
 import unittest
 
 from django.contrib.auth.models import Group, User
@@ -13,7 +12,6 @@ from django.template import Template, TemplateSyntaxError, Context
 from django.test import RequestFactory, TestCase
 from django.contrib.admin.views.main import ChangeList
 from django.contrib.admin import ModelAdmin, site
-from django.utils.six import string_types
 
 from mptt.admin import TreeRelatedFieldListFilter
 
@@ -131,7 +129,7 @@ class ComparableTree(object):
         """
         if hasattr(nodes, 'order_by'):
             nodes = list(nodes.order_by('tree_id', 'lft', 'pk'))
-        elif isinstance(nodes, string_types):
+        elif isinstance(nodes, str):
             tree_nodes = []
             for node in [i.strip() for i in nodes.split('\n') if i.strip()]:
                 params = {}
