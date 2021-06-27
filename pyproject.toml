@@ -3,6 +3,7 @@ requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
+dist-name = "muckrack-django-mptt"
 module = "mptt"
 author = "Michał Domanski, Lee Semel, Craig de Stigter"
 author-email = "dev@muckrack.com"
