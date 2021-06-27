@@ -1,3 +1,7 @@
+"""
+django-mptt, extended for concurrent trees
+"""
+
 __version__ = "0.11.0"
 VERSION = tuple(__version__.split("."))
 
